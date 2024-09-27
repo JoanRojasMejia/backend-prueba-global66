@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "@oak/oak": "jsr:@oak/oak@^17.0.0",
+    "fuse.js": "npm:fuse.js@^7.0.0"
+  }
+}
