@@ -54,7 +54,7 @@ deno run --allow-net server.ts
 - Ejemplo de uso:
 
 ```bash
-curl "http://localhost:3000/searchPokemon?query=char"
+curl "http://localhost:3000/searchPokemon?pokemonName=char"
 ```
 - Respuesta:
 
