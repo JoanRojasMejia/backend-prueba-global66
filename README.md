@@ -40,11 +40,6 @@ cd backend-prueba-global66
 deno run --allow-net server.ts
 ```
 
-## Run by URL
-```
-deno run --allow-net https://raw.githubusercontent.com/FaztWeb/deno-oak-crud-restapi/master/server.ts
-```
-
 # 🚦 Uso
 
 ### 📡 Endpoint de búsqueda
