@@ -40,7 +40,7 @@ cd backend-prueba-global66
 deno run --allow-net server.ts
 ```
 
-# 🚦 Uso
+## 🚦 Uso
 
 ### 📡 Endpoint de búsqueda
 
