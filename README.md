@@ -1,8 +1,42 @@
-# Deno REST API
-A simple CRUD REST API example using Deno and Oak
+# 🕵️‍♂️ Pokémon Fuzzy Search API
 
-## Run Locally
+<p align="justify">Este proyecto es un pequeño backend desarrollado con Deno.js y el framework Oak, que realiza una búsqueda difusa sobre una lista de pokemons obtenidos desde la <a href="https://pokeapi.co/" target="_blank" >PokeAPI</a></p>
+
+
+## 🚀 Funcionalidades
+
+- 🔍 Búsqueda difusa: Permite buscar pokemons por su nombre utilizando un algoritmo de coincidencia difusa.
+
+- 📡 Datos en tiempo real: Los pokemons se obtienen desde la PokeAPI al iniciar el servidor.
+
+## 🛠️ Tecnologías
+
+- ⚡ [Deno.js](https://deno.com/): Un entorno de ejecución seguro para JavaScript y TypeScript.
+
+- 🐿️ [Oak](https://oakserver.org/): Un middleware framework para Deno similar a Koa.
+
+- 🐱‍👤 [PokeAPI](https://pokeapi.co/): La API pública de donde se extraen los datos de los pokemons.
+
+## 💻 Instalación
+
+1. Asegúrate de tener instalado Deno. Si no lo tienes, puedes instalarlo siguiendo las instrucciones en https://deno.land/#installation.
+
+2. Clona este repositorio:
+
+```sh
+git clone https://github.com/JoanRojasMejia/backend-prueba-global66.git
 ```
+
+3. Entra en el directorio del proyecto:
+
+```sh
+cd backend-prueba-global66
+```
+
+4. Inicia el servidor:
+
+
+```sh
 deno run --allow-net server.ts
 ```
 
@@ -11,29 +45,39 @@ deno run --allow-net server.ts
 deno run --allow-net https://raw.githubusercontent.com/FaztWeb/deno-oak-crud-restapi/master/server.ts
 ```
 
-# Endpoints
+# 🚦 Uso
 
-Get All users
-```
-GET      /users
-```
+### 📡 Endpoint de búsqueda
 
-Get a single User by Id
-```
-GET      /users/:id
-```
+- Ruta: `/searchPokemon`
+- Método: `GET`
+- Parámetros:
+  - 🔤 `pokemonName`: El nombre del pokemon o parte del nombre que deseas buscar.
 
-Create a new User
-```
-POST     /products
-```
+<br />
 
-Update an existing User by Id
-```
-PUT      /users/:id
-```
+- Ejemplo de uso:
 
-Delete an existing User by Id
+```bash
+curl "http://localhost:3000/searchPokemon?query=char"
 ```
-DELETE   /users/:id
+- Respuesta:
+
+```json
+[
+  {
+    "name": "charmander",
+    "url": "https://pokeapi.co/api/v2/pokemon/4/"
+  },
+  {
+    "name": "charmeleon",
+    "url": "https://pokeapi.co/api/v2/pokemon/5/"
+  },
+  {
+    "name": "charizard",
+    "url": "https://pokeapi.co/api/v2/pokemon/6/"
+  },
+  ...
+]
+
 ```

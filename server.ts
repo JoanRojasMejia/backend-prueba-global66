@@ -15,7 +15,6 @@ app.use(async (ctx, next) => {
   }
 })
 
-// app.use(cors(corsOptions))
 app.use(router.routes())
 app.use(router.allowedMethods())
 

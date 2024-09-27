@@ -2,5 +2,13 @@
   "imports": {
     "@oak/oak": "jsr:@oak/oak@^17.0.0",
     "fuse.js": "npm:fuse.js@^7.0.0"
+  },
+  "deploy": {
+    "project": "f898af3d-d7d2-43af-9855-0361328fba9a",
+    "exclude": [
+      "**/node_modules"
+    ],
+    "include": [],
+    "entrypoint": "server.ts"
   }
 }
